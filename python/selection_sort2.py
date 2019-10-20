@@ -4,6 +4,8 @@ unsorted = [random.randint(0,100) for i in range(10)]
 
 n = 0
 
+print("The unsorted list was", unsorted)
+
 for i in range(len(unsorted)):
     minimum = unsorted[n]
     for number in unsorted[n:]:
@@ -14,6 +16,8 @@ for i in range(len(unsorted)):
     unsorted[n], unsorted[newMinIndex] = unsorted[newMinIndex], unsorted[n]
     n +=1
 
-print(unsorted)
+
+print("The sorted list is", unsorted)
+
 
 #Very similiar to selection_sort.py but does not use multiple lists
