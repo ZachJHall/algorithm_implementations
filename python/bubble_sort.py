@@ -1,21 +1,19 @@
-unsorted = [1, 13, 50, 3, 2, 7]
+unsorted = [13, 1, 50, 3, 2, 7]
 
 
 iterationNumber = 0
-#
-isSorted = False
 
+isSorted = False
 
 while isSorted == False:
 
     if iterationNumber >= (len(unsorted) - 1):
         break
-    elif unsorted[iterationNumber] > unsorted[iterationNumber + 1]:
+    if unsorted[iterationNumber] > unsorted[iterationNumber + 1]:
         isSorted = False
         unsorted[iterationNumber], unsorted[iterationNumber + 1 ] = unsorted[iterationNumber + 1], unsorted[iterationNumber]
 
     iterationNumber += 1
-
 
 print(unsorted)
 
