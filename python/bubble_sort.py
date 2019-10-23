@@ -1,21 +1,16 @@
-unsorted = [13, 1, 50, 3, 2, 7]
+import random
+
+unsorted = [random.randint(0,100) for i in range(10)]
+
+l = len(unsorted)
 
 
-iterationNumber = 0
-
-isSorted = False
-
-while isSorted == False:
-
-    if iterationNumber >= (len(unsorted) - 1):
-        break
-    if unsorted[iterationNumber] > unsorted[iterationNumber + 1]:
-        isSorted = False
-        unsorted[iterationNumber], unsorted[iterationNumber + 1 ] = unsorted[iterationNumber + 1], unsorted[iterationNumber]
-
-    iterationNumber += 1
+#Go through all numbers
+for i in range(l):
+    #Ensures that it does not retest the last index
+    for j in range(l - i - 1):
+        #Tests the numbers against each other
+        if unsorted[j] > unsorted[j + 1]:
+            unsorted[j], unsorted[j + 1] = unsorted[j + 1], unsorted[j]
 
 print(unsorted)
-
-#Currently the list does not sort lists completely, need to change the
-#statement break and set it to a True or False condition
